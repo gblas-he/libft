@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 18:35:02 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/14 19:30:48 by gblas-he         ###   ########.fr       */
+/*   Created: 2026/01/14 19:23:24 by gblas-he          #+#    #+#             */
+/*   Updated: 2026/01/14 19:26:40 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void ft_bzero(void *s, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t i = 0;
-
-    unsigned char *d;
-
-    d = (unsigned char *) s;
-     while (i < n)
-     {
-        d[i] = 0;
-        i++;
-     }
-}
-
-/*int	main(void)
-{
-    char str[] = "Helloworld";
     
-    printf("%s\n", str);
-    ft_bzero(str+2, 4);
-    printf("%s\n", str);
-	return (0);
-}*/
+}
