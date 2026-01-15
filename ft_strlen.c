@@ -6,11 +6,11 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:38:53 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/14 16:51:12 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:23:41 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t  ft_strlen(const char *s)
 {

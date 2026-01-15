@@ -6,11 +6,11 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:55:08 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/14 18:46:17 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:23:37 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void    *ft_memset(void *s, int c, size_t n)
 {
