@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 19:23:24 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/15 18:23:32 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/18 17:47:23 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
        d = (unsigned char *) dest;
        while (i < n)
        {
-        d[i] = (unsigned char) s[i];
+        d[i] = s[i];
         i++;
        }
            return (dest);
@@ -31,14 +31,16 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
 
 /*int   main(void)
 {
-	char origen[] = "abc";
-	char destino[] = "Hola";
-    char origen2[] = "abc";
-    char destino2[] = "Hola";
+	char str1[] = "abcde";
+	char str2[] = "Hola";
 
-	ft_memcpy(destino, origen, 3);
-	printf("Destino:%s\n", destino);
-    memcpy(destino2, origen2, 3);
-    printf("%s", destino2);
+	ft_memcpy(str1+1, str1, 3);
+	printf("ft:%s\n", str1);
+    memcpy(str1+1, str1, 3);
+    printf("%s\n", str1);
+    ft_memcpy(str1, str2, 3);
+    printf("ft:%s\n", str1);
+    memcpy(str1, str2, 3);
+    printf("%s\n", str1);
 	return(0);
 }*/
