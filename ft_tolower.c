@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 16:54:50 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 18:37:04 by gblas-he         ###   ########.fr       */
+/*   Created: 2026/01/19 17:25:34 by gblas-he          #+#    #+#             */
+/*   Updated: 2026/01/19 18:37:01 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int ft_tolower(int c)
 {
-    if (97 <= c && 122 >= c)
-		return (c - 32);
+    if (65 <= c && 90 >= c)
+		return (c + 32);
 	return (c);
 }
 
 /*int	main(void)
 {
-    int a = 'c';
-    printf("%c\n", ft_toupper(a));
+    int a = 'C';
+    printf("%c\n", ft_tolower(a));
 	return (0);
 }*/

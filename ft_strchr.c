@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 16:54:50 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 18:37:04 by gblas-he         ###   ########.fr       */
+/*   Created: 2026/01/19 17:42:33 by gblas-he          #+#    #+#             */
+/*   Updated: 2026/01/19 18:36:58 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+char *ft_strchr(const char *s, int c)
 {
-    if (97 <= c && 122 >= c)
-		return (c - 32);
-	return (c);
+    int i;
+
+    i = 0;
+    while (s[i] != '0' && s[i] != c)
+    {
+        i++;
+    }
+    
+    if (s[i] == c) 
+        return (char*)&s[i];
+        
+    return (NULL);
 }
 
-/*int	main(void)
-{
-    int a = 'c';
-    printf("%c\n", ft_toupper(a));
-	return (0);
-}*/
+int main() {
+    char *str = "apateros a tu apazto apatos" ;
+    printf("%s", ft_strchr(str, 'z'));
+    return 0;
+}

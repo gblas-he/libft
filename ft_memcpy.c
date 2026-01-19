@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 19:23:24 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/18 17:47:23 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/19 18:37:23 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
-       size_t i = 0;
+    size_t i;
+    unsigned char *s;
+    unsigned char *d;
 
-       unsigned char *s;
-       unsigned char *d;
-
-       s = (unsigned char *) src;
-       d = (unsigned char *) dest;
-       while (i < n)
-       {
+    i = 0;
+    s = (unsigned char *) src;
+    d = (unsigned char *) dest;
+    while (i < n)
+    {
         d[i] = s[i];
         i++;
-       }
-           return (dest);
+    }
+    return (dest);
 }
 
 /*int   main(void)
