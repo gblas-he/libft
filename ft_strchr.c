@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:42:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 18:36:58 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/20 17:46:38 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ char *ft_strchr(const char *s, int c)
     return (NULL);
 }
 
-int main() {
+/*int main() {
     char *str = "apateros a tu apazto apatos" ;
     printf("%s", ft_strchr(str, 'z'));
     return 0;
-}
+}*/
