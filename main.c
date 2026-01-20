@@ -1,52 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 18:09:04 by gblas-he          #+#    #+#             */
+/*   Created: 2026/01/20 19:54:51 by gblas-he          #+#    #+#             */
 /*   Updated: 2026/01/20 20:23:53 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
-{
-	int	i;
-	int	sign;
-	int	num;
-
-	i = 0;
-	sign = 1;
-	num = 0;
-	while (nptr[i] != '\0' && ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32))
-		i++;
-	while (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-			sign *= -1;
-		i++;
-        if (nptr[i] == '+' || nptr[i] == '-')
-            return(0);
-	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (num * sign);
-}
-
-/*int	main(void)
+void    main_atoi(void)
 {
     char *a = "   -12345";
     int b;
 
-	b = ft_atoi(a);
+    b = ft_atoi(a);
     printf("%d\n", b);
-	b = atoi(a);
+    b = atoi(a);
     printf("%d\n", b);
-	return (0);
-}*/
+}
+
+void	main_strlcat(void)
+{
+	char dest [] = "hola Mundo";
+	char src [] = "welcome";
+	size_t size = 12;
+
+	printf("%zu\n", ft_strlcat(dest, src, size));
+	printf("%zu", strlcat(dest, src, size));
+	printf("%s", dest);
+}
+
+int	main(void)
+{
+    main_atoi();
+    printf("\n");
+    main_strlcat();
+    return (0);
+}
