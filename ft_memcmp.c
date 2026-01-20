@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 19:28:12 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/20 15:20:48 by gblas-he         ###   ########.fr       */
+/*   Created: 2026/01/20 15:22:42 by gblas-he          #+#    #+#             */
+/*   Updated: 2026/01/20 15:57:22 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+int ft_memcmp(void *s1, const void *s2, size_t n)
 {
-    size_t i;
-    unsigned char *str;
-    //unsigned char *cc;
+	size_t	i;
+    unsigned char *str1;
+    unsigned char *str2;
 
     i = 0;
-    str = (unsigned char *) s;
-    //cc = (unsigned char *) c;
-    while (i < n)
-    {
-        if (str[i] == c) 
-            return (void *)&str[i];
-        i++;
-    }
-        
-    return (NULL);
+    str1 = (unsigned char *) s1;
+    str2 = (unsigned char *) s2;
+	while (i < n && str1[i] == str2[i])
+		i++;
+	return (str1[i] - str2[i]);
 }
 
-/*int main() {
-    char *str = "apateros a tu apazto apatos" ;
-    printf("%s", (char *)ft_memchr(str, 'z', 19));
-    return 0;
+/*int	main(void)
+{
+	int	b;
+	const char	s1[] = "hola";
+	char	s2[] = "holaa";
+
+	b = ft_memcmp(s1, s2, 3);
+	printf("%d", b);
+	return (0);
 }*/
+
