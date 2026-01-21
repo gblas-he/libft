@@ -6,53 +6,52 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 19:54:51 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/21 16:51:31 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 19:14:13 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	main_isalpha(void)
+void	test_isalpha(void)
 {
     int a = 'c';
     printf("%d\n", ft_isalpha(a));
 }
 
-void	main_isdigit(void)
+void	test_isdigit(void)
 {
     
 }
 
-void	main_isalnum(void)
+void	test_isalnum(void)
 {
     
 }
 
-void	main_isascii(void)
+void	test_isascii(void)
 {
     
 }
 
-void	main_isprint(void)
+void	test_isprint(void)
 {
     
 }
 
-void	main_strlen(void)
+void	test_strlen(void)
 {
     
 }
 
-void	main_memset(void)
+void	test_memset(void)
 {
     char str[] = "Hello world";
 	char *c;
     c = ft_memset(str, 'a',  5);
     printf("%s", c);
-	return (0);
 }
 
-void	main_bzero(void)
+void	test_bzero(void)
 {
     char str[] = "Helloworld";
     
@@ -63,7 +62,7 @@ void	main_bzero(void)
     printf("%s\n", str);
 }
 
-void   main_memcpy(void)
+void   test_memcpy(void)
 {
 	char str1[] = "abcde";
 	char str2[] = "Hola";
@@ -78,7 +77,7 @@ void   main_memcpy(void)
     printf("%s\n", str1);
 }
 
-void   main_memmove(void)
+void   test_memmove(void)
 {
 	char str1[] = "abcde";
 	char str2[] = "Hola";
@@ -93,7 +92,7 @@ void   main_memmove(void)
     printf("%s\n", str1);
 }
 
-void	main_strlcpy(void)
+void	test_strlcpy(void)
 {
 	size_t n;
 	char dest [50];
@@ -105,7 +104,7 @@ void	main_strlcpy(void)
 	printf("%s",dest);
 }
 
-void	main_strlcat(void)
+void	test_strlcat(void)
 {
 	char dest [] = "hola Mundo";
 	char src [] = "welcome";
@@ -116,29 +115,29 @@ void	main_strlcat(void)
 	printf("%s", dest);
 }
 
-void	main_toupper(void)
+void	test_toupper(void)
 {
     int a = 'c';
     printf("%c\n", ft_toupper(a));
 }
 
-void	main_tolower(void)
+void	test_tolower(void)
 {
     int a = 'C';
     printf("%c\n", ft_tolower(a));
 }
 
-void main_strchr() {
+void test_strchr(void) {
     char *str = "apateros a tu apazto apatos" ;
     printf("%s", ft_strchr(str, 'z'));
 }
 
-void main_strrchr() {
+void test_strrchr(void) {
     char *str = "apateros a tu apato apatos" ;
     printf("%s", ft_strrchr(str, 'z'));
 }
 
-void	main_strncmp(void)
+void	test_strncmp(void)
 {
 	int	a;
 	int	b;
@@ -152,13 +151,12 @@ void	main_strncmp(void)
 }
 
 
-void main_memchr(void) {
+void test_memchr(void) {
     char *str = "apateros a tu apazto apatos" ;
     printf("%s", (char *)ft_memchr(str, 'z', 19));
-    return 0;
 }
 
-void	main_memcmp(void)
+void	test_memcmp(void)
 {
 	int	b;
 	const char	s1[] = "hola";
@@ -168,7 +166,7 @@ void	main_memcmp(void)
 	printf("%d", b);
 }
 
-void	main_strnstr(void)
+void	test_strnstr(void)
 {
 	char str[] = "hola que tal";
 	char to_find [] = "el";
@@ -176,7 +174,7 @@ void	main_strnstr(void)
 	printf("%s", strnstr(str, to_find, 10));
 }
 
-void    main_atoi(void)
+void    test_atoi(void)
 {
     char *a = "   -12345";
     int b;
@@ -187,10 +185,20 @@ void    main_atoi(void)
     printf("%d\n", b);
 }
 
+void    test_calloc(void)
+{
+    char *a;
+
+    a = ft_calloc(3, 5);
+    printf("%s\n", a);
+    a = calloc(3, 5);
+    printf("%s\n", a);
+}
+
 
 int	main(void)
 {
-    main_atoi();
+    test_calloc();
     printf("\n");
     return (0);
 }
