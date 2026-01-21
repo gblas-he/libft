@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:12:34 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/21 19:24:02 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 19:51:06 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Reserva memoria para un arreglo y la inicializa a cero
 void *ft_calloc(size_t nmemb, size_t size)
 {
     unsigned char *tmp;
