@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 20:31:32 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 14:56:45 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:25:53 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Concatena cadenas asegurando la terminación en '\0'
 size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;

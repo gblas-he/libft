@@ -6,12 +6,14 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:55:08 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/15 18:23:37 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:41:16 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
+// Rellena un bloque de memoria con un valor específico
 void    *ft_memset(void *s, int c, size_t n)
 {
     size_t i = 0;
@@ -26,12 +28,3 @@ void    *ft_memset(void *s, int c, size_t n)
      }
     return (s);
 }
-
-/*int	main(void)
-{
-    char str[] = "Hello world";
-	char *c;
-    c = ft_memset(str, 'a',  5);
-    printf("%s", c);
-	return (0);
-}*/

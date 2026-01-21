@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 15:36:19 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/15 18:23:24 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:27:35 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Comprueba si el carácter es un dígito (0-9)
  int    ft_isdigit(int c)
  {
     if (!(48 <= c && 57 >= c))

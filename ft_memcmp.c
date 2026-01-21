@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 15:22:42 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/20 15:57:22 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:27:05 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Compara n bytes de dos bloques de memoria
 int ft_memcmp(void *s1, const void *s2, size_t n)
 {
 	size_t	i;

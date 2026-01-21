@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 16:54:50 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/21 16:49:00 by gblas-he         ###   ########.fr       */
+/*   Created: 2026/01/21 15:12:34 by gblas-he          #+#    #+#             */
+/*   Updated: 2026/01/21 15:14:42 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Convierte una letra minúscula a mayúscula
-int ft_toupper(int c)
+void *calloc(size_t nmemb, size_t size)
 {
-    if (97 <= c && 122 >= c)
-		return (c - 32);
-	return (c);
+    
 }

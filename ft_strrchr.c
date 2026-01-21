@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 18:39:35 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/20 17:47:11 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:47:08 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Busca la primera aparición de un carácter en una cadena
 char *ft_strrchr(const char *s, int c)
 {
     int i;
@@ -27,9 +28,3 @@ char *ft_strrchr(const char *s, int c)
     }      
     return (res);
 }
-
-/*int main() {
-    char *str = "apateros a tu apato apatos" ;
-    printf("%s", ft_strrchr(str, 'z'));
-    return 0;
-}*/

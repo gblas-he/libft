@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:25:22 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/20 18:08:14 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:27:19 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Busca una subcadena dentro de otra, limitado a n caracteres
 char   *ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	j;

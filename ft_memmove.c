@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 19:03:16 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/20 15:57:07 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:38:02 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copia n bytes de memoria permitiendo solapamiento
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
        size_t i;
@@ -39,19 +40,3 @@ void *ft_memmove(void *dest, const void *src, size_t n)
        }
        return (dest);
 }
-
-/*int   main(void)
-{
-	char str1[] = "abcde";
-	//char str2[] = "Hola";
-
-	ft_memmove(str1+2, str1, 3);
-	printf("ft:%s\n", str1);
-    /*memmove(str1+2, str1, 4);
-    printf("%s\n", str1);
-    ft_memmove(str1, str2, 3);
-    printf("ft:%s\n", str1);
-    memmove(str1, str2, 3);
-    printf("%s\n", str1);
-	return(0);
-}*/

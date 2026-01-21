@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:09:04 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/20 20:23:53 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:27:26 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Convierte una cadena de texto en un número entero
 int ft_atoi(const char *nptr)
 {
 	int	i;

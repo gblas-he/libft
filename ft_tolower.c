@@ -6,22 +6,16 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:25:34 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 18:37:01 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:48:16 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Convierte una letra mayúscula a minúscula
 int ft_tolower(int c)
 {
     if (65 <= c && 90 >= c)
 		return (c + 32);
 	return (c);
 }
-
-/*int	main(void)
-{
-    int a = 'C';
-    printf("%c\n", ft_tolower(a));
-	return (0);
-}*/

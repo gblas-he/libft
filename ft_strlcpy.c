@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 19:06:51 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 17:49:16 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:32:09 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copia una cadena asegurando la terminación en '\0'
 size_t    ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t    i;
@@ -31,16 +32,3 @@ size_t    ft_strlcpy(char *dst, const char *src, size_t size)
     }
 	return (i);  
 }
-
-/*int	main(void)
-{
-	size_t n;
-	char dest [50];
-    char src [] = "hola mundo";
-
-
-	n = 20;
-	ft_strlcpy(dest, src, n);
-	printf("%s",dest);
-	return (0);
-}*/

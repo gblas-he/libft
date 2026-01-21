@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 19:23:24 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/19 18:37:23 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:39:21 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copia n bytes de memoria de una zona a otra (no permite solapamiento)
 void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
     size_t i;
@@ -28,19 +29,3 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-
-/*int   main(void)
-{
-	char str1[] = "abcde";
-	char str2[] = "Hola";
-
-	ft_memcpy(str1+1, str1, 3);
-	printf("ft:%s\n", str1);
-    memcpy(str1+1, str1, 3);
-    printf("%s\n", str1);
-    ft_memcpy(str1, str2, 3);
-    printf("ft:%s\n", str1);
-    memcpy(str1, str2, 3);
-    printf("%s\n", str1);
-	return(0);
-}*/
