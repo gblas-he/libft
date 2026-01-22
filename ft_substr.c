@@ -6,28 +6,28 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:51:27 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/22 18:35:21 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/22 19:05:03 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Crea una subcadena de `s` desde `start` con longitud máxima `len`, reservando memoria.
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char *s2;
     size_t i;
-    size_t len_s;
 
-    i = 0;
     if (!s)
         return (NULL);
-    if (start > ft_srtlen(s))
+    if (start > ft_strlen(s))
         return (ft_strdup(""));
     if (len > ft_strlen(s + start))
         len = ft_strlen(s + start);
-    s2 = ft_calloc(len + 1, (sizeof(char)));
+    s2 = ft_calloc(len + 1, sizeof(char));
     if (!s2)
         return (NULL);
+    i = 0;
     while (i < len)
     {
         s2[i] = s[start + 1];
@@ -35,3 +35,10 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     }
     return (s2);
 }
+
+/*int main(void)
+{
+    printf("%s\n", ft_substr("Hello World", 13, 15));
+    printf("%s", ft_substr("Hello World", 13, 15));
+    return 0;
+}*/
