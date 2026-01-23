@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:05:54 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/22 20:15:18 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/23 16:27:30 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,34 @@
 char *ft_strjoin(char const *s1, char const *s2)
 {
     char *str;
-    size_t len;
+    size_t len1;
+    size_t len2;
+    size_t  i;
     
-    len = ft_strlen(s1) + ft_strlen(s2)  + 1;
-    str = ft_calloc(ft_strlen(s1) + ft_strlen(s2)  + 1 , sizeof(char));
-
-    str = ft_strlcpy(str, s1, len);
-    str = ft_strlcat(str, s2,len);
-	str[len] = '\0';
-	return (s1);
+    len1 = ft_strlen(s1);
+    len2 = + ft_strlen(s2);
+    str = ft_calloc(len1 + len2 + 1 , sizeof(char));
+	if (!str)
+	    return (NULL);
+    i = 0;
+    while (s1[i])
+    {
+        str[i] = s1[i];
+        i++;
+    }
+    i = 0;
+    while (s2[i]) 
+    {
+        str[len1] = s2[i];
+        len1++;
+        i++;
+    }
+    str[len1] = '\0';
+    return (str);
 }
+
+/*int main (void)
+{
+    printf("%s", ft_strjoin("Hellohello", "World"));
+    return (0);
+}*/
