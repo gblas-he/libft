@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:07:47 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/23 16:03:18 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/24 19:07:10 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ void *ft_calloc(size_t nmemb, size_t size);
 char *ft_strdup(const char *s);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
