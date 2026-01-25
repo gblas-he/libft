@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/25 19:34:06 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/25 20:19:28 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 char **ft_split(char const *s, char c)
 {
-    int i;
+    int len;
     (void) c;
     char ** cc = NULL;
 
-    i =0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    printf("%d", i);
+    len = ft_strlen(s);
+    printf("%d", len);
     return(cc);
 }
 

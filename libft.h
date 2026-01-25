@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:07:47 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/25 17:36:53 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/25 20:15:33 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <strings.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <bsd/string.h>
+//#include <bsd/string.h>
 #include <stdint.h>
 #include <limits.h>
 
@@ -47,6 +47,7 @@ void *ft_calloc(size_t nmemb, size_t size);
 char *ft_strdup(const char *s);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
+char **ft_split(char const *s, char c);
 char *ft_itoa(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char *s, void (*f)(unsigned int, char*));

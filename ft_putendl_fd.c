@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:13:49 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/25 18:15:26 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/25 20:21:40 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 void ft_putendl_fd(char *s, int fd)
 {
-    
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
+    write(fd, "\n", 1);     
 }
