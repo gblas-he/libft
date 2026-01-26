@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:51:27 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/22 19:05:03 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:34:53 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     i = 0;
     while (i < len)
     {
-        s2[i] = s[start + 1];
-        i++;
+        s2[i++] = s[start + 1];
     }
     return (s2);
 }
