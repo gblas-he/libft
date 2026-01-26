@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:05:54 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/23 16:27:30 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:15:53 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Une s1 y s2 en una nueva cadena */
 char *ft_strjoin(char const *s1, char const *s2)
 {
     char *str;

@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:13:49 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/25 20:21:40 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:16:05 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Escribe la cadena s seguida de un salto de línea en el fd */
 void ft_putendl_fd(char *s, int fd)
 {
 	int	i;

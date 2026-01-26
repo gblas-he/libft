@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:31:04 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/24 18:25:18 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:16:11 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Devuelve el número de dígitos de un entero n */
 int ft_digits (long int n)
 {
 	int i;
@@ -32,6 +33,7 @@ int ft_digits (long int n)
 	return i;
 }
 
+/* Convierte un entero n a una cadena */
 char *ft_itoa(int n)
 {
     char *str;

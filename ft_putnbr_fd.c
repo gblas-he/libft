@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 20:24:28 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/25 20:33:09 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:16:03 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Escribe el número n en el fd */
 void ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 17:22:38 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/24 19:06:14 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 17:03:21 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
     return c;
 }*/
 
+/* Aplica f a cada carácter de s y devuelve una nueva cadena */
 char *ft_strmapi(char const *s, char (*f)(unsigned
 int, char))
 {

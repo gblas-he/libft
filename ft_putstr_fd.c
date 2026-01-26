@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 17:32:48 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/25 17:44:22 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:16:02 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Escribe la cadena s en el fd */
 void ft_putstr_fd(char *s, int fd)
 {
 	int	i;
