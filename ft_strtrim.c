@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 20:34:17 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/26 21:34:14 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:26:40 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ char *ft_strtrim(char const *s1, char const *set)
     if (!s1 || !set)
         return NULL;
     start = 0;
-    while(s1[start++] && ft_strchr(set, s1[start]))
+    while(s1[start] && ft_strchr(set, s1[start]))
+        start++;
     end = 0;
-    while (s1[end++])
-    while(end-- > start && ft_strchr(set, s1[end - 1]))
+    while (s1[end])
+        end++;
+    while(end > start && ft_strchr(set, s1[end - 1]))
+        end--;
     str = ft_calloc(end - start + 1 , sizeof(char));
     if (!str)
         return (NULL);
