@@ -27,7 +27,7 @@ char *ft_strtrim(char const *s1, char const *set)
     str = ft_calloc(end - start + 1 , sizeof(char));
     if (!str)
         return (NULL);
-    i = 1;
+    i = 0;
     while(start < end)
     {
         str[i++] = s1[start++];
