@@ -6,34 +6,34 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/28 19:08:28 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/28 21:30:48 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int worth_count(const char *s, char c)
+static int word_count(const char *s, char c)
 {
     int i;
     int trg;
-    int worth;
+    int word;
 
     i=0;
     trg = 0;
-    worth = 0;
+    word = 0;
     while (s[i])
     {
         if (s[i] != c && trg == 0)
         {
             trg = 1;
-            worth++;
+            word++;
         }
         else if (s[i] == c)
             trg = 0;
         i++;
     }
-    //printf("prueba: %d\n", worth);
-    return worth;
+    printf("prueba: %d\n", word);
+    return (word);
 }
 
 static void *ft_free(char **str, int j)
@@ -44,7 +44,7 @@ static void *ft_free(char **str, int j)
         j--;
     }
     free(str);
-    return NULL;  
+    return (NULL);  
 }
 
 char **ft_split(char const *s, char c)
@@ -52,36 +52,66 @@ char **ft_split(char const *s, char c)
     char **str;
     int i;
     int j;
-    int worth;
+    int word;
     int start;
+    int end;
 
-    worth = worth_count(s, c);
-    str = ft_calloc(worth + 1, sizeof(char *));
+    word = word_count(s, c);
+    str = ft_calloc(word + 1, sizeof(char *));
+    //printf("prueba: %s\n", str[j]);
     if(!str)
         return (NULL);
     i = 0;
     j = 0;
     start = 0;
-    while(j < worth)
+    while(j < word)
     {
         while (s[i] && s[i] == c)
             i++;
         start = i;
         while (s[i] != c)
             i++;
-        str[j] = ft_calloc(i - start + 1, sizeof(char *));
+        end = i;
+        i = 0;
+        str[j] = ft_calloc(end - start + 1, sizeof(char));
+        //printf("prueba: %s\n", str[j]);
         if (!str[j])
         {
             ft_free(str, j); 
         }
-        //printf("prueba: %d\n", start);
+        i = 0;
+        while(start < end)
+            str[j][i++] = s[start++];
+        i = end;
+        //str[i] = '\0';
+        //printf("prueba: %s\n", str[i]);
         j++;
     }
-    return str;
+    return (str);
 }
 
 int main (void)
 {
-    printf("prueba main:%s", (char *)ft_split(" Hello World W ", 32));
+    char **array_de_string;
+    // int i = 0;
+
+    array_de_string = ft_split("  Hello   World   W  ", ' ');
+
+    int i = 0;
+    while(array_de_string[i])
+    {
+       printf("prueba main:%s\n", array_de_string[i++]); 
+    }
+
+/*
+printf("prueba main:%s", array_de_string[1][0]);
+                     //  -------|------- |  |
+                     //      puntero    STR CHAR
+*/
+                                    
     return 0;
 }
+/* 
+0 "Hello"
+1 "World"
+2 "W" */
