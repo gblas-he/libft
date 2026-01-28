@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/28 18:24:17 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/28 18:32:27 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,14 @@ char **ft_split(char const *s, char c)
             arr[i] = ft_calloc(len + 1, sizeof(char *));
             
         }
-        printf("prueba: %d\n", len);
+        //printf("prueba: %d\n", len);
         // if(str[i] != c)
         // {
         //     str[i] = 
         // }
         i++;
     }
-    return str;
+    return arr;
 }
 
 int main (void)

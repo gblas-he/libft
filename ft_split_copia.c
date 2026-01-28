@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/28 18:24:15 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/28 18:32:30 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ char **ft_split(char const *s, char c)
     int j;
     int worth;
     int len;
-    int chars = 0;
+    int chars;
 
     worth = worth_count(s, c);
     str = ft_calloc(worth + 1, sizeof(char *));
     i = 0;
     j = 0;
-    len = 0;
+    chars = 0;
     while(j < worth)
     {
         while (s[i] && s[i] == c)
@@ -70,6 +70,6 @@ char **ft_split(char const *s, char c)
 
 int main (void)
 {
-    printf("prueba main:%s", (char *)ft_split(" Hello      World     W ", 32));
+    printf("prueba main:%s", (char *)ft_split(" Hello      Worldd     W ", 32));
     return 0;
 }

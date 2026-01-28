@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:12:34 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/28 16:17:20 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:07:17 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void *ft_calloc(size_t nmemb, size_t size)
         return NULL;
     while (i < size * nmemb)
     {
-        tmp[i++] = 'a';
+        tmp[i++] = '\0';
     }
     return (tmp);
 }
