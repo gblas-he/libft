@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/27 17:12:42 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/28 18:24:15 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,70 +15,61 @@
 static int worth_count(const char *s, char c)
 {
     int i;
-    int is_word;
-    int words;
-    i = 0;
-    words = 0;
-    while (s[i] != '\0')
+    int trg;
+    int worth;
+
+    i=0;
+    trg = 0;
+    worth = 0;
+    while (s[i])
     {
-        is_word = 0;
-        while (s[i] != c && s[i] != '\0')
+        if (s[i] != c && trg == 0)
         {
-            if (!is_word)
-            {
-                is_word = 1;
-                words++;
-            }
+            trg = 1;
+            worth++;
         }
+        else if (s[i] == c)
+            trg = 0;
         i++;
     }
-    printf("prueba: %d\n", words);
-    return words;
+    //printf("prueba: %d\n", worth);
+    return worth;
 }
-
-char    *fill_word(const char *s, int len)
-{
-
-}
-
 char **ft_split(char const *s, char c)
 {
-    char **arr;
-    char *string;
+    char **str;
     int i;
     int j;
+    int worth;
     int len;
-    int words;
+    int chars = 0;
 
-    j = 0;
-    words = worth_count(s, c);
-    arr = ft_calloc( + 1, sizeof(char *));
+    worth = worth_count(s, c);
+    str = ft_calloc(worth + 1, sizeof(char *));
     i = 0;
-    while(i < words)
+    j = 0;
+    len = 0;
+    while(j < worth)
     {
-        len = 0;
-        while (s[j] != '\0')
-        {
-            while (s[j] != c)
-            {
-                len++;
-                j++;
-            }   
-            arr[i] = ft_calloc(len + 1, sizeof(char *));
-            
-        }
-        printf("prueba: %d\n", len);
-        // if(str[i] != c)
-        // {
-        //     str[i] = 
-        // }
-        i++;
+        while (s[i] && s[i] == c)
+            i++;
+        while (s[i + chars] != c)
+            chars++;
+        str[j] = ft_calloc((chars + 1), sizeof(char));
+        if (!str[j])
+            ft_free();
+        // copia con strlcpy (&str[j], i, chars)
+            // World.
+            // W = i (7);
+            // d = chars (13);
+        i += chars;
+        j++;
     }
     return str;
 }
 
 int main (void)
 {
-    printf("prueba main:%s", (char *)ft_split(" He llo Wor       ld W das        ", 32));
+    printf("prueba main:%s", (char *)ft_split(" Hello      World     W ", 32));
     return 0;
 }
