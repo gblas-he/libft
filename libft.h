@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:07:47 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/28 21:28:12 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/29 19:59:52 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,11 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+
+typedef struct      s_list
+{
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
 
 #endif
