@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 17:45:36 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/30 18:12:01 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/30 19:09:05 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int ft_lstsize(t_list *lst)
     int count;
     t_list *current_node;
     
+    if (!lst)
+		return 0;
     current_node = lst;
     count = 0;
     while (current_node != NULL)
