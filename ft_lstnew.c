@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:35:14 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/29 20:01:34 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/30 16:28:30 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ t_list *ft_lstnew(void *content)
 
     node = ft_lstnew(content);
     printf("%s\n", (char *)node->content);
+    free(node;
     return 0;
 }*/
