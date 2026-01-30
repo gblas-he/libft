@@ -32,7 +32,7 @@ static int word_count(const char *s, char c)
             trg = 0;
         i++;
     }
-    printf("prueba: %d\n", word);
+    //printf("prueba: %d\n", word);
     return (word);
 }
 
@@ -90,28 +90,23 @@ char **ft_split(char const *s, char c)
     return (str);
 }
 
-int main (void)
+/*int main (void)
 {
     char **array_de_string;
-    // int i = 0;
-
-    array_de_string = ft_split("  Hello   World   W  ", ' ');
+    array_de_string = ft_split("  Hello   World   Welcome  ", ' ');
 
     int i = 0;
     while(array_de_string[i])
     {
-       printf("prueba main:%s\n", array_de_string[i++]); 
+        ft_putendl_fd(array_de_string[i++], 1);
     }
-
-/*
-printf("prueba main:%s", array_de_string[1][0]);
+    printf("prueba main: %c\n", array_de_string[1][2]);
+    ft_putendl_fd(array_de_string[1], 1);
+    return 0;
+}*/
+/*printf("prueba main:%s", array_de_string[1][0]);
                      //  -------|------- |  |
                      //      puntero    STR CHAR
-*/
-                                    
-    return 0;
-}
-/* 
 0 "Hello"
 1 "World"
-2 "W" */
+2 "Welcome"*/
