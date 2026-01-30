@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/29 19:35:14 by gblas-he          #+#    #+#             */
+/*   Created: 2026/01/30 17:45:36 by gblas-he          #+#    #+#             */
 /*   Updated: 2026/01/30 18:12:01 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+int ft_lstsize(t_list *lst)
 {
-    t_list  *new_node;
+    int count;
+    t_list *current_node;
     
-    new_node = malloc(sizeof(t_list));
-    new_node-> content = content;
-    new_node-> next = NULL;   
-    return new_node;
+    current_node = lst;
+    count = 0;
+    while (current_node != NULL)
+    {
+        current_node = current_node->next;
+        count++;
+    }
+
+    return count;
 }
 
 /*int main (void)
 {
-    t_list *node;
-    char content[] = "hola mundo";
-
-    node = ft_lstnew(content);
-    printf("%s\n", (char *)node->content);
-    free(node;
+    t_list *lista = NULL;
+    int count = 0;
+    
+    ft_lstadd_front(&lista, ft_lstnew("A"));
+    ft_lstadd_front(&lista, ft_lstnew("B"));
+    ft_lstadd_front(&lista, ft_lstnew("C"));
+    count = ft_lstsize(lista);
+    printf("%d" , count);
     return 0;
 }*/
