@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:07:47 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/31 15:39:13 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/31 17:16:38 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ int ft_lstsize(t_list *lst);
 t_list *ft_lstlast(t_list *lst);
 void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstdelone(t_list *lst, void (*del)(void *));
+void ft_lstclear(t_list **lst);
 
 #endif

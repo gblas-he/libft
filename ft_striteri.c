@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 17:19:58 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/26 21:15:59 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/31 16:33:04 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 /* Aplica f a cada carácter de s */
 void ft_striteri(char *s, void (*f)(unsigned int,
-char*))
+char *))
 {
     unsigned int i;
 

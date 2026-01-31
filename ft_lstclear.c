@@ -1,58 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 19:19:17 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/31 17:36:24 by gblas-he         ###   ########.fr       */
+/*   Created: 2026/01/31 16:32:37 by gblas-he          #+#    #+#             */
+/*   Updated: 2026/01/31 17:40:06 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void ft_lstclear(t_list **lst)
 {
     t_list *current_node;
     
-    if (!new || !lst)
+    if (!lst)
 	    return;
-    if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
     current_node = *lst;
-    while (current_node->next)
+    while (current_node)
+    {
+        printf("%s", (char *)current_node->content);
         current_node = current_node->next;
-    current_node->next = new;
+    }
 }
 
-int main() {
+int main()
+{
     t_list *list = NULL;
     t_list *temp;
-    int a = 1, b = 2, c = 3;
-    t_list *node1 = ft_lstnew(&a);
-    t_list *node2 = ft_lstnew(&b);
-    t_list *node3 = ft_lstnew(&c);
-
 
     // Añadir nodos al frente
-    ft_lstadd_back(&list, node1);
-    ft_lstadd_back(&list, node2);
-    ft_lstadd_back(&list, node3);
+    ft_lstadd_back(&list, ft_lstnew("A"));
+    ft_lstadd_back(&list, ft_lstnew("B"));
+    ft_lstadd_back(&list, ft_lstnew("C"));
 
     // Imprimir la lista
-    temp = list;
+    ft_lstclear(&list);
+    /*temp = list;
     while (temp)
     {
-        printf("%d", *((int *)temp->content));
+        printf("%s", (char *)temp->content);
         if (temp->next)
             printf(" -> ");
         temp = temp->next;
     }
-    printf(" -> NULL\n");
+    printf(" -> NULL\n");*/
 
     // Liberar memoria
     while (list)
