@@ -6,27 +6,28 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 16:32:37 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/31 17:40:06 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/31 19:06:33 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst)
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *current_node;
+    t_list *tmp;
     
     if (!lst)
 	    return;
-    current_node = *lst;
-    while (current_node)
+    while (*lst)
     {
-        printf("%s", (char *)current_node->content);
-        current_node = current_node->next;
+        tmp = (*lst)->next;
+        del((*lst)->content);
+        free((*lst));
+        (*lst) = tmp;
     }
 }
 
-int main()
+/*int main()
 {
     t_list *list = NULL;
     t_list *temp;
@@ -37,8 +38,7 @@ int main()
     ft_lstadd_back(&list, ft_lstnew("C"));
 
     // Imprimir la lista
-    ft_lstclear(&list);
-    /*temp = list;
+    temp = list;
     while (temp)
     {
         printf("%s", (char *)temp->content);
@@ -46,7 +46,7 @@ int main()
             printf(" -> ");
         temp = temp->next;
     }
-    printf(" -> NULL\n");*/
+    printf(" -> NULL\n");
 
     // Liberar memoria
     while (list)
@@ -57,4 +57,5 @@ int main()
     }
 
     return 0;
-}
+}*/
+

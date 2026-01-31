@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 18:13:47 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/31 17:40:06 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/01/31 18:14:48 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ t_list  *ft_lstlast(t_list *lst)
 		return (NULL);
     current_node = lst;
     while (current_node->next)
-    {
         current_node = current_node->next;
-    }
     return current_node;
 }
 
