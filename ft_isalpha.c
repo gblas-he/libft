@@ -6,17 +6,17 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:19:02 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/26 21:16:17 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 17:31:36 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Comprueba si el carácter es una letra (A-Z o a-z)
- int    ft_isalpha(int c)
- {
-    if (!((65 <= c && c <= 90)
-        || (97 <= c && c <= 122)))
-			return (0);
+int	ft_isalpha(int c)
+{
+	if (!((65 <= c && c <= 90)
+			|| (97 <= c && c <= 122)))
+		return (0);
 	return (1);
- }
+}

@@ -6,29 +6,27 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:12:34 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/28 21:20:35 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 17:27:08 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //Reserva memoria para un arreglo y la inicializa a cero
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    unsigned char *tmp;
-    size_t i;
+	size_t			i;
+	unsigned char	tmp;
 
-    i = 0;
-    if (size != 0 && nmemb > SIZE_MAX  / size)
-        return NULL;
-    tmp = malloc (size * nmemb);
-    if (!tmp)
-        return NULL;
-    while (i < size * nmemb)
-    {
-        tmp[i++] = '\0';
-    }
-    return (tmp);
+	if (size != 0 && nmemb > SIZE_MAX / size)
+		return (malloc(0));
+	tmp = malloc (size * nmemb);
+	if (!tmp)
+		return (NULL);
+	i = 0;
+	while (i < size * nmemb)
+		tmp[i++] = '\0';
+	return (tmp);
 }
 
 /*int    main(void)
