@@ -6,22 +6,22 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 15:22:42 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/21 16:27:05 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:48:04 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Compara n bytes de dos bloques de memoria
-int ft_memcmp(void *s1, const void *s2, size_t n)
+int	ft_memcmp(void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-    unsigned char *str1;
-    unsigned char *str2;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-    i = 0;
-    str1 = (unsigned char *) s1;
-    str2 = (unsigned char *) s2;
+	i = 0;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	while (i < n && str1[i] == str2[i])
 		i++;
 	return (str1[i] - str2[i]);
@@ -37,4 +37,3 @@ int ft_memcmp(void *s1, const void *s2, size_t n)
 	printf("%d", b);
 	return (0);
 }*/
-

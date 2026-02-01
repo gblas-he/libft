@@ -6,31 +6,29 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:42:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/26 20:54:55 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:51:29 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Busca la última aparición de un carácter en una cadena
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '0' && s[i] != c)
-    {
-        i++;
-    }
-    
-    if (s[i] == c) 
-        return (char*)&s[i];
-        
-    return (NULL);
+	i = 0;
+	while (s[i] != '0' && s[i] != c)
+	{
+		i++;
+	}
+	if (s[i] == c)
+		return ((char *)&s[i]);
+	return (NULL);
 }
 
 /*int main() {
-    char *str = "apateros a tu apazto apatos" ;
-    printf("%s", ft_strchr(str, 'z'));
-    return 0;
+	char *str = "apateros a tu apazto apatos" ;
+	printf("%s", ft_strchr(str, 'z'));
+	return (0);
 }*/

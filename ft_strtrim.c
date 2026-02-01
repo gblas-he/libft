@@ -6,43 +6,42 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 20:34:17 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/27 15:26:40 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:53:35 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t start;
-    size_t end;
-    size_t i;
-    char *str;
+	size_t	start;
+	size_t	end;
+	size_t	i;
+	char	*str;
 
-    if (!s1 || !set)
-        return NULL;
-    start = 0;
-    while(s1[start] && ft_strchr(set, s1[start]))
-        start++;
-    end = 0;
-    while (s1[end])
-        end++;
-    while(end > start && ft_strchr(set, s1[end - 1]))
-        end--;
-    str = ft_calloc(end - start + 1 , sizeof(char));
-    if (!str)
-        return (NULL);
-    i = 0;
-    while(start < end)
-    {
-        str[i++] = s1[start++];
-    }
-    return str;
-    
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = 0;
+	while (s1[end])
+		end++;
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	str = ft_calloc(end - start + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
+	{
+		str[i++] = s1[start++];
+	}
+	return (str);
 }
 
 /*int main() {
-    char *str = "ztztapateros a tu apazto apatosztztz" ;
-    printf("%s", ft_strtrim(str, "t"));
-    return 0;
+	char *str = "ztztapateros a tu apazto apatosztztz" ;
+	printf("%s", ft_strtrim(str, "t"));
+	return (0);
 }*/

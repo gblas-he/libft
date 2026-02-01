@@ -6,22 +6,22 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 18:13:47 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/31 18:14:48 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 18:29:56 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    t_list *current_node;
-    
-    if (!lst)
+	t_list	*current_node;
+
+	if (!lst)
 		return (NULL);
-    current_node = lst;
-    while (current_node->next)
-        current_node = current_node->next;
-    return current_node;
+	current_node = lst;
+	while (current_node->next)
+		current_node = current_node->next;
+	return (current_node);
 }
 
 /*int main (void)

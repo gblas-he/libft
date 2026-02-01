@@ -6,30 +6,30 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 19:19:17 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/31 17:36:24 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 18:15:19 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *current_node;
-    
-    if (!new || !lst)
-	    return;
-    if (*lst == NULL)
+	t_list	*current_node;
+
+	if (!new || !lst)
+		return ;
+	if (*lst == NULL)
 	{
 		*lst = new;
 		return ;
 	}
-    current_node = *lst;
-    while (current_node->next)
-        current_node = current_node->next;
-    current_node->next = new;
+	current_node = *lst;
+	while (current_node->next)
+		current_node = current_node->next;
+	current_node->next = new;
 }
 
-int main() {
+/*int main() {
     t_list *list = NULL;
     t_list *temp;
     int a = 1, b = 2, c = 3;
@@ -63,4 +63,4 @@ int main() {
     }
 
     return 0;
-}
+}*/

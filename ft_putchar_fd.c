@@ -6,15 +6,14 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 19:38:21 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/26 21:16:07 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:50:44 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* Escribe el carácter c en el fd */
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write (fd, &c, 1);
+	write(fd, &c, 1);
 }
-

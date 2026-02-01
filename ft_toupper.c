@@ -6,16 +6,16 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:54:50 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/21 16:49:00 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 20:28:27 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Convierte una letra minúscula a mayúscula
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (97 <= c && 122 >= c)
+	if (97 <= c && 122 >= c)
 		return (c - 32);
 	return (c);
 }
