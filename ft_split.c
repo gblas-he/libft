@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 20:12:47 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/01 20:34:17 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,30 +62,30 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	start = 0;
-	while (j < word)
+	while (i < word)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		start = i;
-		while (s[i] != c)
-			i++;
-		end = i;
-		i = 0;
-		str[j] = ft_calloc(end - start + 1, sizeof(char));
-		if (!str[j])
+		while (s[j] && s[j] == c)
+			j++;
+		start = j;
+		while (s[j] != c)
+			j++;
+		end = j;
+		j = 0;
+		str[i] = ft_calloc(end - start + 1, sizeof(char));
+		if (!str[i])
 		{
-			ft_free(str, j);
+			ft_free(str, i);
 		}
-		i = 0;
+		j = 0;
 		while (start < end)
-			str[j][i++] = s[start++];
-		i = end;
-		j++;
+			str[i][j++] = s[start++];
+		j = end;
+		i++;
 	}
 	return (str);
 }
 
-/*int main (void)
+int main (void)
 {
 	char **array_de_string;
 	array_de_string = ft_split("  Hello   World   Welcome  ", ' ');
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 	printf("prueba main: %c\n", array_de_string[1][2]);
 	ft_putendl_fd(array_de_string[1], 1);
 	return (0);
-}*/
+}
 /*printf("prueba main:%s", array_de_string[1][0]);
 						//  -------|------- |  |
 						//      puntero    STR CHAR
