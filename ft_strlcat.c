@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 20:31:32 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/01/26 21:20:11 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:33:09 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,3 @@ size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
-
-/*int	main(void)
-{
-	char dest [] = "hola Mundo";
-	char src [] = "welcome";
-	size_t size = 12;
-
-	printf("%zu\n", ft_strlcat(dest, src, size));
-	//printf("%d", strlcat(dest, src, size));
-	printf("%s", dest);
-	return (0);
-}*/

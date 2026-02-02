@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:25:22 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 19:53:13 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:35:28 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	char str[] = "hola que tal";
-	char to_find [] = "el";
-	printf("%s\n", ft_strnstr(str, to_find, 10));
-	printf("%s", strnstr(str, to_find, 10));
-	return (0);
-}*/

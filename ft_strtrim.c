@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 20:34:17 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 19:53:35 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:36:06 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (str);
 }
-
-/*int main() {
-	char *str = "ztztapateros a tu apazto apatosztztz" ;
-	printf("%s", ft_strtrim(str, "t"));
-	return (0);
-}*/

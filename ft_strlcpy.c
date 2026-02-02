@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 19:06:51 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 19:51:54 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:33:48 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (i);
 }
-
-/*int main(void)
-{
-	size_t n;
-	char dest [5];
-	char src [] = "hola mundo";
-
-
-	n = 2;
-	ft_strlcpy(dest, src, n);
-	printf("%s\n",dest);
-	strlcpy(dest, src, n);
-	printf("%s",dest);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:09:04 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 16:59:14 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:14:59 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (num * sign);
 }
-
-/*int	main(void)
-{
-    char *a = "   -12345";
-    int b;
-
-	b = ft_atoi(a);
-    printf("%d\n", b);
-	b = atoi(a);
-    printf("%d\n", b);
-	return (0);
-}*/

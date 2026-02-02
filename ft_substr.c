@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:51:27 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 20:27:56 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:36:34 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (s2);
 }
-
-/*int main(void)
-{
-	printf("%s\n", ft_substr("Hello World", 13, 15));
-	printf("%s", ft_substr("Hello World", 13, 15));
-	return (0);
-}*/

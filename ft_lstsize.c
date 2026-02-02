@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 17:45:36 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 18:43:14 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:15:46 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-
-/*int main (void)
-{
-	t_list *lista = NULL;
-	int count = 0;
-
-	ft_lstadd_front(&lista, ft_lstnew("A"));
-	ft_lstadd_front(&lista, ft_lstnew("B"));
-	ft_lstadd_front(&lista, ft_lstnew("C"));
-	count = ft_lstsize(lista);
-	printf("%d" , count);
-	return (0);
-}*/

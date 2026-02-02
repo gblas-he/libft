@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:05:54 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 19:51:45 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:32:36 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[len1] = '\0';
 	return (str);
 }
-
-/*int main (void)
-{
-	printf("%s", ft_strjoin("Hellohello", "World"));
-	return (0);
-}*/

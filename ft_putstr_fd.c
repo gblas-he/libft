@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 17:32:48 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 19:51:11 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:18:02 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-/*int	main(void)
-{
-	char	str[] = "Hello World";
-	ft_putstr_fd(str, 2);
-	return (0);
-}*/
