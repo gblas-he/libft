@@ -51,26 +51,36 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 	int		i;
 	int		j;
+	int		word;
 	int		start;
+	int		end;
 
-	if (!s)
-		return (NULL);
-	str = ft_calloc(word_count(s, c) + 1, sizeof(char *));
+	word = word_count(s, c);
+	str = ft_calloc(word + 1, sizeof(char *));
 	if (!str)
 		return (NULL);
-	i = -1;
+	i = 0;
 	j = 0;
-	while (++i < word_count(s, c))
+	start = 0;
+	while (i < word)
 	{
 		while (s[j] && s[j] == c)
 			j++;
 		start = j;
-		while (s[j] && s[j] != c)
+		while (s[j] != c)
 			j++;
-		str[i] = ft_calloc(j - start + 1, sizeof(char));
+		end = j;
+		j = 0;
+		str[i] = ft_calloc(end - start + 1, sizeof(char));
 		if (!str[i])
-			return (ft_free(str, i));
-		ft_strlcpy(str[i], s + start, j - start + 1);
+		{
+			ft_free(str, i);
+		}
+		j = 0;
+		while (start < end)
+			str[i][j++] = s[start++];
+		j = end;
+		i++;
 	}
 	return (str);
 }
@@ -85,7 +95,7 @@ int main (void)
 	{
 		ft_putendl_fd(array_de_string[i++], 1);
 	}
-	printf("prueba main: %c\n", array_de_string[2][2]);
+	printf("prueba main: %c\n", array_de_string[1][2]);
 	ft_putendl_fd(array_de_string[1], 1);
 	return (0);
 }
