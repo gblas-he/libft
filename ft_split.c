@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
-int main (void)
+/*int main (void)
 {
 	char **array_de_string;
 	array_de_string = ft_split("  Hello   World   Welcome  ", ' ');
@@ -88,7 +88,7 @@ int main (void)
 	printf("prueba main: %c\n", array_de_string[2][2]);
 	ft_putendl_fd(array_de_string[1], 1);
 	return (0);
-}
+}*/
 /*printf("prueba main:%s", array_de_string[1][0]);
 						//  -------|------- |  |
 						//      puntero    STR CHAR
