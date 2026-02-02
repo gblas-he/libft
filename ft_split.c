@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 16:38:27 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:38:58 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,24 +74,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
-
-/*int main (void)
-{
-	char **array_de_string;
-	array_de_string = ft_split("  Hello   World   Welcome  ", ' ');
-
-	int i = 0;
-	while(array_de_string[i])
-	{
-		ft_putendl_fd(array_de_string[i++], 1);
-	}
-	printf("prueba main: %c\n", array_de_string[2][2]);
-	ft_putendl_fd(array_de_string[1], 1);
-	return (0);
-}*/
-/*printf("prueba main:%s", array_de_string[1][0]);
-						//  -------|------- |  |
-						//      puntero    STR CHAR
-0 "Hello"
-1 "World"
-2 "Welcome"*/
