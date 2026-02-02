@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 17:16:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 19:39:12 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/02 23:28:38 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -261,7 +261,7 @@ void test_memcmp(void)
 {
 	int	b;
 	const char	s1[] = "hola";
-	char	s2[] = "holaa";
+	const char	s2[] = "holaa";
 
 	b = ft_memcmp(s1, s2, 3);
 	printf("%d", b);
@@ -299,8 +299,8 @@ void test_split(void)
 2 "Welcome"*/
 }
 
-void test_trchr(void) {
-	char *str = "apateros a tu apazto apatos" ;
+void test_strchr(void) {
+	char *str = " apateros a tu apazto azpatos " ;
 	printf("%s", ft_strchr(str, 'z'));
 }
 
@@ -312,18 +312,16 @@ void test_strdup(void)
 
 void to_upper_even(unsigned int i, char *c)
 {
-    unsigned int	i;
-
-    (void)i; // no usamos el índice
-    if (*c >= 'a' && *c <= 'z')
+    if (i % 2 == 0 && *c >= 'a' && *c <= 'z')
         *c = *c - ('a' - 'A');
 }
 
 void test_striteri(void)
 {   
 	char s[] = "hello";
+    printf("Antes: %s\n", s);
     ft_striteri(s, to_upper_even);
-	printf("%s\n", s);
+    printf("Después: %s\n", s);
 }
 
 void test_strjoin(void)
@@ -356,7 +354,7 @@ void test_strlcpy(void)
 	printf("%s",dest);
 }
 
-char to_upper_even(unsigned int i, char c)
+char mapi_to_upper_even(unsigned int i, char c)
 {
     (void) i;
     if (c >= 'a' && c <= 'z')
@@ -367,7 +365,7 @@ char to_upper_even(unsigned int i, char c)
 void test_strmapi(void)
 {
     char s[] = "hello";
-	char *res = ft_strmapi(s, to_upper_even);
+	char *res = ft_strmapi(s, mapi_to_upper_even);
     printf("%s\n", res);
     free(res);
 }
@@ -377,7 +375,7 @@ void test_strnstr(void)
 	char str[] = "hola que tal";
 	char to_find [] = "el";
 	printf("%s\n", ft_strnstr(str, to_find, 10));
-	printf("%s", strnstr(str, to_find, 10));
+	//printf("%s", strnstr(str, to_find, 10));
 }
 
 void test_strtrim() {
@@ -393,6 +391,6 @@ void test_substr(void)
 
 int	main(void)
 {
-    test_isalpha();
+    test_strchr();
 	return 0;
 }
