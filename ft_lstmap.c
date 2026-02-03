@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:07:07 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 19:15:49 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:31:24 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Crea una nueva lista aplicando una función a cada nodo
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_node;

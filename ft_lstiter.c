@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:13:13 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 19:15:52 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:31:03 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Aplica una función a cada nodo de la lista
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)

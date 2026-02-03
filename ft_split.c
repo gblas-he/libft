@@ -6,12 +6,13 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/03 12:11:56 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:32:29 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Devuelve la cantidad de palabras en una cadena
 static int	word_count(const char *s, char c)
 {
 	int	i;
@@ -35,6 +36,7 @@ static int	word_count(const char *s, char c)
 	return (word);
 }
 
+// Libera memoria asignada y evita fugas
 static void	*ft_free(char **str, int j)
 {
 	while (j >= 0)
@@ -46,6 +48,7 @@ static void	*ft_free(char **str, int j)
 	return (NULL);
 }
 
+// Divide una cadena en subcadenas usando un delimitador
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
