@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:12:34 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 19:14:59 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 12:44:41 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t			i;
 
 	if (size != 0 && nmemb > SIZE_MAX / size)
-		return (malloc(0));
+		return (NULL);
 	tmp = malloc (size * nmemb);
 	if (!tmp)
 		return (NULL);

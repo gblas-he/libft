@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 17:16:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 23:28:38 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 12:50:58 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,7 +195,7 @@ void test_lstlast(void)
         printf("%s\n", (char *) last->content);
 }
 
-void lstmap(void) {
+void test_lstmap(void) {
     t_list *list = NULL;
     t_list *temp;
     int a = 1, b = 2, c = 3;
@@ -301,7 +301,7 @@ void test_split(void)
 
 void test_strchr(void) {
 	char *str = " apateros a tu apazto azpatos " ;
-	printf("%s", ft_strchr(str, 'z'));
+	printf("%s", ft_strchr(str, '\0'));
 }
 
 void test_strdup(void)
@@ -389,8 +389,19 @@ void test_substr(void)
 	printf("%s", ft_substr("Hello World", 13, 15));
 }
 
+void test_strrchr(void) {
+	char *str = " apatberos a tu apazto azpbatos " ;
+	printf("%s", ft_strrchr(str, '\0'));
+}
+
+void test_strncmp(void) {
+	char *str = " apatba " ;
+    char *str2 = " apbtba " ;
+	printf("%d", ft_strncmp(str, str2, 6));
+}
+
 int	main(void)
 {
-    test_strchr();
+    test_strncmp();
 	return 0;
 }

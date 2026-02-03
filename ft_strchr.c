@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:42:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 23:31:03 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 11:56:32 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	if(!s || !c)
+	if(!s)
 		return (NULL);
 	i = 0;
 	while (s[i] && s[i] != c)
