@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 18:39:35 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/03 12:38:03 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 14:22:35 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,18 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int			i;
 	char		*res;
+	unsigned char cc;
 
 	i = 0;
 	res = NULL;
+	cc = (unsigned char) c;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == cc)
 			res = (char *)&s[i];
 		i++;
 	}
-	if (c == 0)
+	if (cc == 0)
 		return ((char *) &s[i]);
 	return (res);
 }

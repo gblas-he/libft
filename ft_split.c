@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:33:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/03 13:32:29 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:35:01 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	word_count(const char *s, char c)
 	return (word);
 }
 
-// Libera memoria asignada y evita fugas
+// Libera memoria asignada de cada fila de la matriz y evita fugas
 static void	*ft_free(char **str, int j)
 {
 	while (j >= 0)

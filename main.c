@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 17:16:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/03 12:50:58 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:36:21 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,12 +251,6 @@ void test_lst_size(void)
 	printf("%d" , count);
 }
 
-void test_memchr(void)
-{
-	char *str = "apateros a tu apazto apatos";
-	printf("%s", (char *)ft_memchr(str, 'z', 19));
-}
-
 void test_memcmp(void)
 {
 	int	b;
@@ -400,8 +394,14 @@ void test_strncmp(void) {
 	printf("%d", ft_strncmp(str, str2, 6));
 }
 
+void test_memchr(void)
+{
+	char *str = "apateros a tu apazto apatos";
+	printf("%s", (char *)ft_memchr(str, 'z', 19));
+}
+
 int	main(void)
 {
-    test_strncmp();
+    test_memchr();
 	return 0;
 }

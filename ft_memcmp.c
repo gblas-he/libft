@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 15:22:42 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/02 22:44:21 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 14:00:11 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str2 = (unsigned char *)s2;
 	while (i < n && str1[i] == str2[i])
 		i++;
+	if (i == n)
+		return (0);
 	return (str1[i] - str2[i]);
 }
