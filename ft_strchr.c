@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:42:33 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/03 14:38:47 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:53:23 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 // Busca la primera aparición de un carácter en una cadena
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	unsigned char cc;
+	int				i;
+	unsigned char	cc;
 
-	if(!s)
-		return (NULL);
 	cc = (unsigned char)c;
 	i = 0;
 	while (s[i])

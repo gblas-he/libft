@@ -6,7 +6,7 @@
 /*   By: gblas-he <gblas-he@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 19:23:24 by gblas-he          #+#    #+#             */
-/*   Updated: 2026/02/01 20:08:01 by gblas-he         ###   ########.fr       */
+/*   Updated: 2026/02/03 16:53:04 by gblas-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 	unsigned char	*d;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
